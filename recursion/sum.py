@@ -11,7 +11,7 @@ def recursive_sum_1(n):
         return 1
     return recursive_sum_1(n - 1) + n
 
-#O(n)
+# O(n)
 def recursive_sum_2(a, b):
     if a == b:
         return a
