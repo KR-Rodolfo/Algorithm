@@ -21,7 +21,8 @@ def binary_search_recursive(A, s, e, k):
     - 반복문을 log n 번 반복하기 때문에 수행시간은 O(log n)이다.
     - 재귀적인 방법을 이용하지 않아 위의 알고리즘보다 공간복잡도가 더 낮다. 
 '''
-def binary_search_loop(A, s, e, k):
+def binary_search_loop(A, k):
+    s, e = 0, len(A) - 1
     while s <= e:
         m = (s + e) // 2
         if k < A[m]:
@@ -33,8 +34,8 @@ def binary_search_loop(A, s, e, k):
     return -1
     
 A = list(map(int, input().split()))
-s, e = 0, len(A) - 1
 k = int(input())
 
+s, e = 0, len(A) - 1
 print(binary_search_recursive(A, s, e, k))
-print(binary_search_loop(A, s, e, k))
+print(binary_search_loop(A, k))
