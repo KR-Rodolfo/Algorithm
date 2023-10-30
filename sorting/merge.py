@@ -1,5 +1,6 @@
 # Merge Sort
 # T(n) = 2*T(n/2) + C*n
+# O(n*logn)
 
 def merge_sort(A, first, last):
     if first >= last: return
