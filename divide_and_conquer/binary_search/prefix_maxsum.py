@@ -14,8 +14,8 @@ def prefix_max_sum_1(A):
         p[i] = p[i - 1] + A[i]
     
     curr_max = 0
-    for j in range(n - 1, -1, -1): # O(n^2)
-        for i in range(n):
+    for j in range(n - 1, 0, -1): # O(n^2)
+        for i in range(j):
             if p[j] - p[i] > curr_max:
                 curr_max = p[j] - p[i]
 
